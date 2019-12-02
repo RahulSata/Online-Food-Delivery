@@ -1,0 +1,27 @@
+/*.texto_grande {
+    font-size: 2.5rem;
+    color: white;
+} 
+#icone_grande {
+    font-size: 8rem;
+    color:#fff;
+}*/ 
+
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

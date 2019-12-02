@@ -1,0 +1,9 @@
+node app.js from cmd with backend in Desktop/Bookstore
+after that nodemon app
+From here open cmd and ng serve
+localhost:4200
+
+
+
+CORS: Cross origian resource Sharing MEans --- We can not use the get, post , put methods in Angular js if we are
+	not using CORS.

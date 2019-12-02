@@ -1,0 +1,14 @@
+<p>
+  login works!
+</p>
+
+<html>
+  <body><br><br><br>
+      <form #myform="ngForm" (ngSubmit)="onClickSubmit1(myform.value)">
+          username:<input type = "text" name ="username" [(ngModel)]="username">
+          Password<input type = "password" name = "password" [(ngModel)]="password" >
+          <input type="submit" value="submit">
+         <br><br>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!--DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+<br><br><br><br><h2>MenuList</h2>
+<table id="dtBasicExample" class="col-sm-6 col-md-6 table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th class="th-sm">Item Name
+     
+      </th>
+      <th class="th-sm">Item name 
+     
+      </th>
+      <th class="th-sm">Quantity
+     
+      </th>
+      <th class="th-sm">price
+     
+      </th>
+      <th class="th-sm">Check To Cart
+     
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    
+    <tr *ngFor="let data of myData">
+       
+        <td><strong>{{data.res_name}}</strong></td>
+        <td>{{data.item}}</td>
+        <td><button (click)="count1(mycount)">+</button>&nbsp;{{counter}}  <button (click)="count2(mycount)">-</button></td>
+        <td>{{data.price}}</td>
+        <td>
+            <input type="submit">
+            <strong>accept</strong>
+        </td>
+        
+      </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn" style="margin-left: 44%;width: 102px;">Button</button>
+</body>
+</html-->
+
+<!----h2 class="big-heading">pricing plan</h2>
+<div class="table">
+  <h2 class="heading">
+    house cleaning
+  </h2>
+  <div class="block">
+  <p>kitchen and bedrooms</p>
+    <span class="price">$28/
+      <sub>hour</sub>
+    </span>   
+    <ul class="options">
+      <li>wipe cabinets</li>
+      <li>wipe tops</li>
+      <li>dust tops of cabinets</li>
+    </ul>
+</div>
+<div class="block">
+<p>bathroom</p>
+    <span class="price">$29/
+      <sub>hour</sub>
+    </span>   
+    <ul class="options">
+      <li>dust counters</li>
+      <li>dust light</li>
+      <li>wipe countertops</li>
+    </ul>
+</div>
+<div class="block">
+<p>living room</p>
+    <span class="price">$29/
+      <sub>hour</sub>
+    </span>   
+    <ul class="options">
+      <li>make beds</li>
+      <li>dust furniture</li>
+      <li>dust mini-blinds</li>
+    </ul>
+</div>
+<button class="btn">
+  <p>book your order now</p>
+  <span class="fa fa-cart-plus" aria-hidden="true"></span>
+</button>
+</div>
+s
+
+<h4>I inspired from <a href="http://inspirationui.com/items/1417">this</a></h4-->
+
+<!----br><br><br><br>
+  <h2>MenuItems</h2>
+  <p>Type something in the input field to search the table for resnames, :</p>  
+  <input id="myInput" type="text" placeholder="Search..">
+  <br><br>
+  
+  <table>
+      <thead>
+          <tr>
+            <th class="th-sm">Item Name
+           
+            </th>
+            <th class="th-sm">Item name 
+           
+            </th>
+            <th class="th-sm">Quantity
+           
+            </th>
+            <th class="th-sm">price
+           
+            </th>
+            <th class="th-sm">Check To Cart
+           
+            </th>
+          </tr>
+        </thead>
+       
+        <tbody id="myTable">
+      <tr *ngFor="let data of myData">
+       
+          <td><strong>{{data.res_name}}</strong></td>
+          <td>{{data.item}}</td>
+          <td><button (click)="count1(mycount)">+</button>&nbsp;{{counter}}  <button (click)="count2(mycount)">-</button></td>
+          <td>{{data.price}}</td>
+          <td>
+              <button>
+              <strong>ADD TO CART</strong>
+              </button>
+          </td>
+          
+        </tr>
+    </tbody>
+  </table>
+     
+  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>-->
+
+
+<br><br><br>
+<h3>Success</h3>
+<!----form #myform="ngForm" (ngSubmit)="onClickSubmit2(myform.value)"-->
+<!----select class="form-control input-lg" name ="rest_name" ngModel="rest_name">
+  <option *ngFor="let data of myData" [value]= "data.id">
+      {{data.res_name}}
+    </option>
+  </select-->
+  <!---
+<input type = "text" name ="rest_name" [(ngModel)]="rest_name">
+
+  <input type = "submit" value = "submit">
+  <h2>Selected:{{rest_name}}</h2>
+  </form-->
+
+<table>
+  <input id="myInput" type="text" placeholder="Search..">
+  <tbody id="myTable">
+    <tr *ngFor="let data of mydata; let i=index">
+     
+        <td><strong>{{data.res_name}}</strong></td>
+        <td>{{data.item}}</td>
+        <td><button (click)="count1(i)">+</button> {{ data.item_count }} <button (click)="count2(i)">-</button></td>
+        <td>{{data.price}}</td>
+        <td>            
+            <button (click) = "select(i)">
+            <strong>ADD TO CART</strong>
+            </button>
+        </td>
+      </tr>
+  </tbody>
+  </table>
